@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://tyv5uousnlpw"]
+
+[ext_resource type="Script" path="res://movingbubble.gd" id="1_8e0s3"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4wjdn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81u7f"]
+
+[node name="Movingbubble" type="CharacterBody2D"]
+script = ExtResource("1_8e0s3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(19.96, 19.92)
+texture = SubResource("CanvasTexture_4wjdn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_81u7f")
+
+[node name="CountdownLabel" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -10.0
+offset_top = -12.0
+offset_right = 10.0
+offset_bottom = 11.0
+scale = Vector2(1, 0.993597)
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

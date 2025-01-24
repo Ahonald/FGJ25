@@ -1,0 +1,7 @@
+res://player.tscn
+res://player.gd
+res://gameplay.tscn
+res://movingbubble.tscn
+res://movingbubble.gd
+res://bubblespawner.gd
+res://bubblespawner.tscn
