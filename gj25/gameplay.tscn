@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0ps80gtc3hvt"]
+[gd_scene load_steps=7 format=3 uid="uid://4haodudc1dhg"]
 
-[ext_resource type="PackedScene" uid="uid://yccqqquuyd3l" path="res://player.tscn" id="1_n4qx7"]
-[ext_resource type="PackedScene" uid="uid://dkvs3jh0l21b0" path="res://bubblespawner.tscn" id="2_cgldi"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="1_n4qx7"]
+[ext_resource type="PackedScene" path="res://bubblespawner.tscn" id="2_cgldi"]
+[ext_resource type="AudioStream" uid="uid://mf4t5lo6pwja" path="res://Audio/Music/jpoptest.ogg" id="3_v74yh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_do1mt"]
 
@@ -28,3 +29,8 @@ texture = SubResource("CanvasTexture_keh3r")
 position = Vector2(-210, -46)
 
 [node name="Bubblespawner" parent="." instance=ExtResource("2_cgldi")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_v74yh")
+volume_db = -6.0
+autoplay = true
