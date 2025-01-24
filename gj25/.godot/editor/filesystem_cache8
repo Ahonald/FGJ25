@@ -1,11 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-<<<<<<< Updated upstream
-::res://::1737738005
-icon.svg::CompressedTexture2D::3439951064490496939::1737737908::1737737999::1::::<><>::
-::res://Sprites/::1737738061
-::res://Sprites/Enviromental/::1737738232
-KUPLASPRITESHEET.png::CompressedTexture2D::7039583129930529877::1737738232::1737738234::1::::<><>::
-=======
-::res://::1737736628
+::res://::1737744522
+bubblespawner.gd::GDScript::-1::1737742024::0::1::::<>Node<>::
+bubblespawner.tscn::PackedScene::7905645813069474571::1737742989::0::1::::<><>::res://bubblespawner.gd
+gameplay.tscn::PackedScene::6559681284936201433::1737742989::0::1::::<><>::uid://yccqqquuyd3l::::res://player.tscn<>uid://dkvs3jh0l21b0::::res://bubblespawner.tscn
 icon.svg::CompressedTexture2D::3439951064490496939::1737736622::1737736628::1::::<><>::
->>>>>>> Stashed changes
+movingbubble.gd::GDScript::-1::1737742024::0::1::::<>CharacterBody2D<>::
+movingbubble.tscn::PackedScene::1384462798912843976::1737742989::0::1::::<><>::res://movingbubble.gd<>uid://c7ka5163a8o7v::::res://Sprites/Enviromental/KUPLASPRITESHEET.png
+player.gd::GDScript::-1::1737742024::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::1688811875535763919::1737744230::0::1::::<><>::res://player.gd<>uid://cg8sx8f1gs52o::::res://Sprites/Punainen_ukko/Old hero.png
+::res://Sprites/::1737744522
+::res://Sprites/Enviromental/::1737742766
+KUPLASPRITESHEET.png::CompressedTexture2D::7039583129930529877::1737741991::1737742011::1::::<><>::
+::res://Sprites/Punainen_ukko/::1737744522
+new_sprite_frames.tres::SpriteFrames::-1::1737743597::0::1::::<><>::
+nobg_Old hero.PNG::CompressedTexture2D::475638337182293537::1737744520::1737744522::1::::<><>::

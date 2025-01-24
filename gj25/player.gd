@@ -22,7 +22,7 @@ var dead
 var isShooting
 var isPointingRight
 
-#@onready var anim = get_node("AnimationPlayer") 
+@onready var anim = get_node("AnimationPlayer") 
 #@onready var rb = $RigidBody2D
 #@onready var hpLabel = $"../UI/PlayerStats/HP/HPLabel"
 #@onready var hpBar = $"../UI/PlayerStats/HP/HealthBar"
@@ -37,7 +37,7 @@ var isPointingRight
 #@onready var PlayerJump = get_node("PlayerJump")
 
 func _ready():
-	#anim.play("Idle")
+	anim.play("Idle")
 	#gameplay = $".."
 	#xpBar.max_value = float(nextXP)
 	dead = false
@@ -69,25 +69,25 @@ func _physics_process(delta):
 			jumpCount-=1
 			#if !isShooting:
 				#PlayerJump.play()
-				#anim.play("Jump")
+			anim.play("Jump")
 				
 		var direction = Input.get_axis("ui_left", "ui_right")
 		if direction:
 			if direction == -1:
-				#get_node("AnimatedSprite2D").flip_h = true
+				get_node("AnimatedSprite2D").flip_h = true
 				isPointingRight = false
 			elif direction == 1:
-				#get_node("AnimatedSprite2D").flip_h = false
+				get_node("AnimatedSprite2D").flip_h = false
 				isPointingRight = true
 			velocity.x = direction * SPEED
 			#if velocity.y == 0 && !isShooting:
-				#anim.play("Run")
+			anim.play("Run")
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			#if velocity.y == 0 && !isShooting:
-				#anim.play("Idle")
-		#if velocity.y > 0 && !dead && !isShooting:
-			#anim.play("Fall")
+			anim.play("Idle")
+		if velocity.y > 0:
+			anim.play("Fall")
 			
 		if !dead:
 			move_and_slide()

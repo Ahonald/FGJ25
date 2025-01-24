@@ -25,7 +25,6 @@ scale = Vector2(20, 20)
 texture = SubResource("CanvasTexture_keh3r")
 
 [node name="Player" parent="." instance=ExtResource("1_n4qx7")]
-modulate = Color(0.0784314, 0.0901961, 1, 1)
-position = Vector2(-172, -43)
+position = Vector2(-210, -46)
 
 [node name="Bubblespawner" parent="." instance=ExtResource("2_cgldi")]
