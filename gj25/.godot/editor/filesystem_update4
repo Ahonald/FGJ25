@@ -4,3 +4,9 @@ res://bubblespawner.tscn
 res://player.tscn
 res://Platform.tscn
 res://longplatform.tscn
+res://player.gd
+res://movingbubble.gd
+res://gameplay.gd
+res://bubblespawner.gd
+res://checkpoint.gd
+res://assholeplayer.gd

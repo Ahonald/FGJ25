@@ -20,7 +20,7 @@ var currentRangeVal = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	startPoint = global_position.y # Replace with function body.
-	movementFactor = rng.randf_range(1, 6)
+	movementFactor = rng.randf_range(1, 8)
 	currentRangeVal = movementFactor
 	movementRange = 100 * movementFactor
 	movementSpeed = 50 * movementFactor
@@ -55,7 +55,7 @@ func _setSprite(colorSeed):
 		4:
 			AnimatedSprite.play("Black")
 		5:
-			AnimatedSprite.play("BloodOrange")
+			AnimatedSprite.play("BloodOrnage")
 		6:
 			AnimatedSprite.play("Blue")
 		7:

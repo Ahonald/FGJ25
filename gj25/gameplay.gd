@@ -5,6 +5,11 @@ var startingPointValue = 0
 @onready var currentHeightLabel = $UI/CurrentHeight
 @onready var maxHeightLabel = $UI/MaximumHeight
 
+@onready var AssholePlayer = $AssholePlayer
+
+var playerFallMag = 0;
+var playerFallMaxMag = 1.5;
+
 var maxHeightValue = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,7 +20,15 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#_changeCurrentHeightLabel(int(startingPointValue + int(-player.global_position.y if player.global_position.y < 0 else player.global_position.y)))
+	if not player.is_on_floor():
+		playerFallMag += delta
+	else:
+		playerFallMag = 0
+	if(playerFallMag > playerFallMaxMag):
+		if !AssholePlayer.playing:
+			AssholePlayer.play()
+		playerFallMag = 0
+		
 	_changeCurrentHeight(-player.global_position.y)
 	pass
 

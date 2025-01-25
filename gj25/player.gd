@@ -8,7 +8,7 @@ var nextXP = 50
 var die = false
 
 var SPEED = 150
-const JUMP_VELOCITY = -450.0
+const JUMP_VELOCITY = -350.0
 
 var maxJumpCount = 1
 var jumpCount = 1

@@ -21,8 +21,6 @@ func _process(delta: float) -> void:
 		gameplay.add_child(newBubble)
 		newBubble.global_position.x = player.global_position.x + rng.randf_range(-50,50)
 		newBubble.global_position.y = player.global_position.y + 250
-		print(newBubble.global_position.x)
-		print(newBubble.global_position.y)
 		spawnfrequency = rng.randf_range(0.5,1)
 		timer = 0
 	pass
