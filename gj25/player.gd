@@ -31,7 +31,6 @@ var isPointingRight
 #@onready var dmgText = $Label
 #@onready var lvlLabel = $"../UI/PlayerStats/LevelLabel"
 #@onready var gameplay = $".."
-#@onready var sprite = $AnimatedSprite2D
 #@onready var PlayerHurt = get_node("PlayerHurt")
 #@onready var PlayerShoot = get_node("PlayerShoot")
 #@onready var PlayerJump = get_node("PlayerJump")
