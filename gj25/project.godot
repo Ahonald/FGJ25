@@ -15,12 +15,15 @@ run/main_scene="res://gameplay.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+<<<<<<< HEAD
 [display]
 
 window/size/viewport_width=540
 window/size/viewport_height=960
 window/size/resizable=false
 
+=======
+>>>>>>> origin/main
 [input]
 
 ui_left={

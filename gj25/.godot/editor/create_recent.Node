@@ -1,12 +1,7 @@
-TileMapLayer
-Node
-AnimatedSprite2D
-Sprite2D
-StaticBody2D
-CharacterBody2D
-CollisionShape2D
-Label
-CanvasLayer
-AnimationPlayer
 AudioStreamPlayer2D
+Sprite2D
+Node
+CollisionShape2D
+CharacterBody2D
+StaticBody2D
 Camera2D
