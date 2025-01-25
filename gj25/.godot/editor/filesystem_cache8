@@ -1,20 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737805233
+::res://::1737807238
 bubblespawner.gd::GDScript::-1::1737742024::0::1::::<>Node<>::
-bubblespawner.tscn::PackedScene::7905645813069474571::1737746126::0::1::::<><>::res://bubblespawner.gd
-gameplay.tscn::PackedScene::6559681284936201433::1737746126::0::1::::<><>::uid://yccqqquuyd3l::::res://player.tscn<>uid://dkvs3jh0l21b0::::res://bubblespawner.tscn<>uid://mf4t5lo6pwja::::res://Audio/Music/jpoptest.ogg
+bubblespawner.tscn::PackedScene::7905645813069474571::1737807230::0::1::::<><>::res://bubblespawner.gd
+gameplay.tscn::PackedScene::6559681284936201433::1737807230::0::1::::<><>::uid://yccqqquuyd3l::::res://player.tscn<>uid://dkvs3jh0l21b0::::res://bubblespawner.tscn<>uid://mf4t5lo6pwja::::res://Audio/Music/jpoptest.ogg
 icon.svg::CompressedTexture2D::3439951064490496939::1737736622::1737736628::1::::<><>::
 movingbubble.gd::GDScript::-1::1737742024::0::1::::<>CharacterBody2D<>::
-movingbubble.tscn::PackedScene::1384462798912843976::1737746126::0::1::::<><>::res://movingbubble.gd<>uid://c7ka5163a8o7v::::res://Sprites/Enviromental/KUPLASPRITESHEET.png
-player.gd::GDScript::-1::1737744931::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::1688811875535763919::1737746126::0::1::::<><>::res://player.gd<>uid://g1nxuf5vpyld::::res://Sprites/Punainen_ukko/nobg_Old hero.PNG
+movingbubble.tscn::PackedScene::1384462798912843976::1737807230::0::1::::<><>::res://movingbubble.gd<>uid://c7ka5163a8o7v::::res://Sprites/Enviromental/KUPLASPRITESHEET.png
+player.gd::GDScript::-1::1737807227::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::1688811875535763919::1737807238::0::1::::<><>::res://player.gd<>uid://g1nxuf5vpyld::::res://Sprites/Punainen_ukko/nobg_Old hero.PNG
 ::res://Audio/::1737746113
-::res://Audio/Music/::1737805233
+::res://Audio/Music/::1737805324
 ClearJingle.ogg::AudioStreamOggVorbis::3921972851195661851::1737805233::1737805324::1::::<><>::
 jpoptest.ogg::AudioStreamOggVorbis::854384328672598514::1737805233::1737805324::1::::<><>::
 victroad.ogg::AudioStreamOggVorbis::7861135105059087958::1737805233::1737805324::1::::<><>::
 ::res://Sprites/::1737744522
-::res://Sprites/Enviromental/::1737742766
+::res://Sprites/Enviromental/::1737807281
+KUPLASPRITESHEET32x32.png::CompressedTexture2D::8142933647037721848::1737807281::1737807296::1::::<><>::
+KUPLASPRITESHEET - Copy.png::CompressedTexture2D::2840517735455442784::1737807281::1737807296::1::::<><>::
 KUPLASPRITESHEET.png::CompressedTexture2D::7039583129930529877::1737741991::1737742011::1::::<><>::
+PLATFORMS.png::CompressedTexture2D::6358939433986998654::1737807281::1737807296::1::::<><>::
 ::res://Sprites/Punainen_ukko/::1737746117
 nobg_Old hero.PNG::CompressedTexture2D::475638337182293537::1737746113::1737746117::1::::<><>::

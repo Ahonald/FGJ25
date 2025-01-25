@@ -5,6 +5,9 @@ extends CharacterBody2D
 
 @onready var CountdownLabel = $CountdownLabel
 
+@onready var AnimatedSprite = $AnimatedSprite2D
+var colorRandom = 0
+
 var movementFactor = 1
 var movementRange = 100
 var startPoint
@@ -13,6 +16,7 @@ var goingForward = true
 var rng = RandomNumberGenerator.new()
 var currentRangeVal = 1
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	startPoint = global_position.y # Replace with function body.
@@ -20,6 +24,9 @@ func _ready():
 	currentRangeVal = movementFactor
 	movementRange = 100 * movementFactor
 	movementSpeed = 50 * movementFactor
+	
+	colorRandom = rng.randi_range(0, 36)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -35,4 +42,7 @@ func _process(delta):
 		if(distTravelled > movementRange):
 			queue_free()
 
-	
+func _setSprite(seed):
+	match seed:
+		0:
+			 

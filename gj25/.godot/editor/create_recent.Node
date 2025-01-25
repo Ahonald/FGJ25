@@ -1,9 +1,6 @@
-<<<<<<< Updated upstream
-AnimationPlayer
 AnimatedSprite2D
-=======
+AnimationPlayer
 AudioStreamPlayer2D
->>>>>>> Stashed changes
 Sprite2D
 Node
 Label
