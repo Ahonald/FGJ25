@@ -1,7 +1,8 @@
-[gd_scene load_steps=43 format=3 uid="uid://tyv5uousnlpw"]
+[gd_scene load_steps=44 format=3 uid="uid://tyv5uousnlpw"]
 
 [ext_resource type="Script" path="res://movingbubble.gd" id="1_8e0s3"]
 [ext_resource type="Texture2D" uid="uid://doaq6sfirdfsy" path="res://Sprites/Enviromental/KUPLASPRITESHEET32x32.png" id="2_6hh3v"]
+[ext_resource type="FontFile" uid="uid://f8igmj5gexlb" path="res://Fonts/HomeVideo-BLG6G.ttf" id="2_cak34"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81u7f"]
 
@@ -477,6 +478,7 @@ offset_top = -12.0
 offset_right = 10.0
 offset_bottom = 11.0
 scale = Vector2(1, 0.993597)
+theme_override_fonts/font = ExtResource("2_cak34")
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1

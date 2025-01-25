@@ -5,3 +5,4 @@ res://movingbubble.tscn
 res://movingbubble.gd
 res://bubblespawner.gd
 res://bubblespawner.tscn
+res://gameplay.gd
