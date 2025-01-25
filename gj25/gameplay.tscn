@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://c0ps80gtc3hvt"]
+[gd_scene load_steps=14 format=4 uid="uid://c0ps80gtc3hvt"]
 
 [ext_resource type="PackedScene" uid="uid://yccqqquuyd3l" path="res://player.tscn" id="1_n4qx7"]
 [ext_resource type="Script" path="res://gameplay.gd" id="1_y0rwh"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cwuk2k024rblm" path="res://Sprites/Enviromental/PLATFORMS.png" id="7_du5wl"]
 [ext_resource type="Script" path="res://assholeplayer.gd" id="9_eltgw"]
 [ext_resource type="AudioStream" uid="uid://bosft1y2h2uth" path="res://Audio/SFX/BubblePop.ogg" id="10_2ckfn"]
+[ext_resource type="PackedScene" uid="uid://cg88hgasfibe2" path="res://finishlinetrigger.tscn" id="11_4bps1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6vob8"]
 texture = ExtResource("7_du5wl")
@@ -40,16 +41,13 @@ sources/0 = SubResource("TileSetAtlasSource_6vob8")
 position = Vector2(0, -1)
 script = ExtResource("1_y0rwh")
 
-[node name="CheckPoint1" parent="." instance=ExtResource("2_c2eag")]
-
-[node name="Player" parent="." instance=ExtResource("1_n4qx7")]
-position = Vector2(-136, -180)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
-position = Vector2(202, 186)
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_v74yh")
 volume_db = -6.0
 autoplay = true
+
+[node name="Player" parent="." instance=ExtResource("1_n4qx7")]
+position = Vector2(-136, -180)
 
 [node name="Bubblespawner" parent="." instance=ExtResource("2_cgldi")]
 
@@ -82,3 +80,10 @@ script = ExtResource("9_eltgw")
 
 [node name="BubblePop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_2ckfn")
+
+[node name="CheckPoint1" parent="." instance=ExtResource("2_c2eag")]
+position = Vector2(-133, -1783)
+scale = Vector2(1.74297, 0.251499)
+
+[node name="Finishlinetrigger" parent="." instance=ExtResource("11_4bps1")]
+position = Vector2(-28, -184)

@@ -3,14 +3,16 @@
 [ext_resource type="Script" path="res://checkpoint.gd" id="1_ibs6a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywpb1"]
-size = Vector2(143, 20)
+size = Vector2(143, 131.5)
 
 [node name="CheckPoint1" type="Node2D"]
-position = Vector2(-145, -1798)
+position = Vector2(2, -2)
 script = ExtResource("1_ibs6a")
 
 [node name="Node" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node"]
-position = Vector2(-134.5, -1798)
+position = Vector2(-1, -2.75)
 shape = SubResource("RectangleShape2D_ywpb1")
+
+[connection signal="body_entered" from="Node" to="." method="_on_node_body_entered"]

@@ -15,12 +15,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	timer+=delta
-	if timer > spawnfrequency:
-		var newBubble = bubble.instantiate()
-		gameplay.add_child(newBubble)
-		newBubble.global_position.x = player.global_position.x + rng.randf_range(-50,50)
-		newBubble.global_position.y = player.global_position.y + 250
-		spawnfrequency = rng.randf_range(0.5,1)
-		timer = 0
+	if(!player.die):
+		timer+=delta
+		if timer > spawnfrequency:
+			var newBubble = bubble.instantiate()
+			gameplay.add_child(newBubble)
+			newBubble.global_position.x = player.global_position.x + rng.randf_range(-50,50)
+			newBubble.global_position.y = player.global_position.y + 250
+			spawnfrequency = rng.randf_range(0.5,1)
+			timer = 0
 	pass

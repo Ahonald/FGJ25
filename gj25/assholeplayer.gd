@@ -3,7 +3,6 @@ extends AudioStreamPlayer
 var rng = RandomNumberGenerator.new()
 
 var usedUpAssholeAudioArray = []
-
 var usedUpCheckPointArray = []
 
 const FDVoice1 = preload("res://Audio/Voices/Falldown/FDVoice1.ogg")
@@ -25,6 +24,11 @@ const CPVoice6 = preload("res://Audio/Voices/Checkpoint/CPVoice6.ogg")
 const CPVoice7 = preload("res://Audio/Voices/Checkpoint/CPVoice7.ogg")
 const CPVoice8 = preload("res://Audio/Voices/Checkpoint/CPVoice8.ogg")
 
+const WinVoice1 = preload("res://Audio/Voices/Win/WinVoice1.ogg")
+const WinVoice2 = preload("res://Audio/Voices/Win/WinVoice2.ogg")
+const WinVoice3 = preload("res://Audio/Voices/Win/WinVoice3.ogg")
+const WinVoice4 = preload("res://Audio/Voices/Win/WinVoice4.ogg")
+const WinVoice5 = preload("res://Audio/Voices/Win/WinVoice5.ogg")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -107,4 +111,25 @@ func _playAssholeSound():
 		9:
 			self.stream = FDVoice9
 			play()
+	pass
+
+func _playWinSound():
+	var wSoundSeed = rng.randi_range(1, 5)
+	match wSoundSeed:
+		1:
+			self.stream = WinVoice1
+			play()
+		2:
+			self.stream = WinVoice2
+			play()
+		3:
+			self.stream = WinVoice3
+			play()
+		4:
+			self.stream = WinVoice4
+			play()
+		5:
+			self.stream = WinVoice5
+			play()
+
 	pass

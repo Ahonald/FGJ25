@@ -11,3 +11,5 @@ res://bubblespawner.gd
 res://checkpoint.gd
 res://assholeplayer.gd
 res://checkpoint.tscn
+res://finishlinetrigger.tscn
+res://finishline.gd

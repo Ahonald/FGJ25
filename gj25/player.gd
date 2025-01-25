@@ -16,7 +16,7 @@ var jumpCount = 1
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
+@onready var music = $"../MusicPlayer"
 
 var dead
 var isShooting
@@ -96,6 +96,7 @@ func _physics_process(delta):
 	else:
 		#anim.play("Die")
 		await get_tree().create_timer(1).timeout
+		music.stop()
 		#sprite.visible = false
 		#gameplay._gameOer()
 

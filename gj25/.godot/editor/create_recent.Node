@@ -1,11 +1,11 @@
+AudioStreamPlayer
+CollisionShape2D
 Area2D
+Sprite2D
 Node2D
 Node
-AudioStreamPlayer
 AudioStreamPlayer2D
-Sprite2D
 Parallax2D
-CollisionShape2D
 CharacterBody2D
 StaticBody2D
 Camera2D
