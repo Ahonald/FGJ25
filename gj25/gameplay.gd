@@ -6,6 +6,7 @@ var startingPointValue = 0
 @onready var maxHeightLabel = $UI/MaximumHeight
 
 @onready var AssholePlayer = $AssholePlayer
+@onready var BubblePop = $BubblePop
 
 var playerFallMag = 0;
 var playerFallMaxMag = 1.5;
@@ -41,3 +42,6 @@ func _changeCurrentHeight(currentHeightValue):
 func _changeMaxHeight(currentHeightValue):
 	maxHeightValue = currentHeightValue
 	maxHeightLabel.text = "Maximum height: " + str(currentHeightValue)
+
+func _playBubblePop():
+	BubblePop.play()

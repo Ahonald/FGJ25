@@ -69,6 +69,7 @@ func _physics_process(delta):
 			#if !isShooting:
 				#PlayerJump.play()
 			anim.play("Jump")
+			$Jump.play()
 				
 		var direction = Input.get_axis("ui_left", "ui_right")
 		if direction:

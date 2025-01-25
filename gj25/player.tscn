@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://yccqqquuyd3l"]
+[gd_scene load_steps=23 format=3 uid="uid://yccqqquuyd3l"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_shpw8"]
 [ext_resource type="Texture2D" uid="uid://g1nxuf5vpyld" path="res://Sprites/Punainen_ukko/nobg_Old hero.PNG" id="2_i1s8u"]
+[ext_resource type="AudioStream" uid="uid://j221qpefrnvn" path="res://Audio/SFX/Jump.ogg" id="3_6vua2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m4x13"]
 size = Vector2(12, 16)
@@ -277,3 +278,7 @@ libraries = {
 "": SubResource("AnimationLibrary_548jw")
 }
 autoplay = "Idle"
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_6vua2")
+bus = &"SFX"

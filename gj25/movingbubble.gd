@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var CountdownLabel = $CountdownLabel
 
 @onready var AnimatedSprite = $AnimatedSprite2D
+@onready var Gameplay = $"../../Gameplay"
 var colorRandom = 0
 
 var movementFactor = 1
@@ -40,6 +41,7 @@ func _process(delta):
 		else:
 			CountdownLabel.text = str(roundf((movementRange - distTravelled)/100))
 		if(distTravelled > movementRange):
+			Gameplay._playBubblePop()
 			queue_free()
 
 func _setSprite(colorSeed):
