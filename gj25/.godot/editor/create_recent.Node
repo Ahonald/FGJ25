@@ -1,7 +1,3 @@
-Label
-CanvasLayer
-AnimatedSprite2D
-AnimationPlayer
 AudioStreamPlayer2D
 Sprite2D
 Node
