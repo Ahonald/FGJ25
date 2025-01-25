@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 var hasbeenhit = false
 @onready var AssholePlayer = $"../AssholePlayer"
@@ -13,4 +13,7 @@ func _process(delta: float) -> void:
 	
 func _on_area_2d_body_entered(body):
 	if(body.name == "Player"):
+		if hasbeenhit == false:
+			if !AssholePlayer.playing:
+				AssholePlayer._playCheckpointNoise()	
 		pass

@@ -1,19 +1,15 @@
-[gd_scene load_steps=15 format=4 uid="uid://c0ps80gtc3hvt"]
+[gd_scene load_steps=13 format=4 uid="uid://c0ps80gtc3hvt"]
 
 [ext_resource type="PackedScene" uid="uid://yccqqquuyd3l" path="res://player.tscn" id="1_n4qx7"]
 [ext_resource type="Script" path="res://gameplay.gd" id="1_y0rwh"]
+[ext_resource type="PackedScene" uid="uid://4ymlg7wgn1e3" path="res://checkpoint.tscn" id="2_c2eag"]
 [ext_resource type="PackedScene" uid="uid://dkvs3jh0l21b0" path="res://bubblespawner.tscn" id="2_cgldi"]
-[ext_resource type="Script" path="res://checkpoint.gd" id="2_xqxb6"]
 [ext_resource type="AudioStream" uid="uid://mf4t5lo6pwja" path="res://Audio/Music/jpoptest.ogg" id="3_v74yh"]
 [ext_resource type="FontFile" uid="uid://f8igmj5gexlb" path="res://Fonts/HomeVideo-BLG6G.ttf" id="4_1snfj"]
-[ext_resource type="AudioStream" uid="uid://bosft1y2h2uth" path="res://Audio/SFX/BubblePop.ogg" id="6_b4n56"]
-[ext_resource type="AudioStream" uid="uid://b6t7vnt2io4i8" path="res://Audio/Voices/Falldown/FDVoice1.ogg" id="7_ds7nc"]
+[ext_resource type="AudioStream" path="res://Audio/Voices/Voice1.ogg" id="7_ds7nc"]
 [ext_resource type="Texture2D" uid="uid://cwuk2k024rblm" path="res://Sprites/Enviromental/PLATFORMS.png" id="7_du5wl"]
 [ext_resource type="Script" path="res://assholeplayer.gd" id="9_eltgw"]
-[ext_resource type="Texture2D" uid="uid://dnglidg7r18j6" path="res://Sprites/Enviromental/PARALBGv3.png" id="10_2ln54"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywpb1"]
-size = Vector2(143, 20)
+[ext_resource type="AudioStream" uid="uid://bosft1y2h2uth" path="res://Audio/SFX/BubblePop.ogg" id="10_2ckfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6vob8"]
 texture = ExtResource("7_du5wl")
@@ -44,23 +40,16 @@ sources/0 = SubResource("TileSetAtlasSource_6vob8")
 position = Vector2(0, -1)
 script = ExtResource("1_y0rwh")
 
-[node name="CheckPoint1" type="Area2D" parent="."]
-position = Vector2(-145, -1798)
-script = ExtResource("2_xqxb6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckPoint1"]
-position = Vector2(10.5, 0)
-shape = SubResource("RectangleShape2D_ywpb1")
+[node name="CheckPoint1" parent="." instance=ExtResource("2_c2eag")]
 
 [node name="Player" parent="." instance=ExtResource("1_n4qx7")]
 position = Vector2(-136, -180)
 
-[node name="BGM" type="AudioStreamPlayer2D" parent="Player"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
 position = Vector2(202, 186)
 stream = ExtResource("3_v74yh")
 volume_db = -6.0
 autoplay = true
-bus = &"MUSIC"
 
 [node name="Bubblespawner" parent="." instance=ExtResource("2_cgldi")]
 
@@ -89,18 +78,7 @@ tile_set = SubResource("TileSet_co000")
 
 [node name="AssholePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_ds7nc")
-bus = &"VOICES"
 script = ExtResource("9_eltgw")
 
-[node name="Parallax2D" type="Parallax2D" parent="."]
-show_behind_parent = true
-repeat_size = Vector2(0, 1920)
-autoscroll = Vector2(0, 60)
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
-texture = ExtResource("10_2ln54")
-
 [node name="BubblePop" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_b4n56")
-volume_db = -12.0
-bus = &"SFX"
+stream = ExtResource("10_2ckfn")

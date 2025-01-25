@@ -27,7 +27,8 @@ func _process(delta: float) -> void:
 		playerFallMag = 0
 	if(playerFallMag > playerFallMaxMag):
 		if !AssholePlayer.playing:
-			AssholePlayer.play()
+			pass
+			#AssholePlayer._playAssholeSound()
 		playerFallMag = 0
 		
 	_changeCurrentHeight(-player.global_position.y)
@@ -45,3 +46,4 @@ func _changeMaxHeight(currentHeightValue):
 
 func _playBubblePop():
 	BubblePop.play()
+	

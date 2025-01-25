@@ -5,6 +5,9 @@ res://player.tscn
 res://Platform.tscn
 res://longplatform.tscn
 res://player.gd
-res://default_bus_layout.tres
 res://movingbubble.gd
 res://gameplay.gd
+res://bubblespawner.gd
+res://checkpoint.gd
+res://assholeplayer.gd
+res://checkpoint.tscn
