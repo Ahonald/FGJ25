@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dvnx6yr6hgkt6"]
+
+[node name="Longplatform" type="StaticBody2D"]

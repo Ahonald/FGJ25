@@ -1,42 +1,51 @@
-[gd_scene load_steps=9 format=3 uid="uid://c0ps80gtc3hvt"]
+[gd_scene load_steps=9 format=4 uid="uid://c0ps80gtc3hvt"]
 
 [ext_resource type="PackedScene" uid="uid://yccqqquuyd3l" path="res://player.tscn" id="1_n4qx7"]
 [ext_resource type="Script" path="res://gameplay.gd" id="1_y0rwh"]
 [ext_resource type="PackedScene" uid="uid://dkvs3jh0l21b0" path="res://bubblespawner.tscn" id="2_cgldi"]
 [ext_resource type="AudioStream" uid="uid://mf4t5lo6pwja" path="res://Audio/Music/jpoptest.ogg" id="3_v74yh"]
 [ext_resource type="FontFile" uid="uid://f8igmj5gexlb" path="res://Fonts/HomeVideo-BLG6G.ttf" id="4_1snfj"]
+[ext_resource type="Texture2D" uid="uid://cwuk2k024rblm" path="res://Sprites/Enviromental/PLATFORMS.png" id="7_du5wl"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_do1mt"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6vob8"]
+texture = ExtResource("7_du5wl")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:8/0 = 0
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tur0l"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_keh3r"]
+[sub_resource type="TileSet" id="TileSet_co000"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_6vob8")
 
 [node name="Gameplay" type="Node2D"]
+position = Vector2(0, -1)
 script = ExtResource("1_y0rwh")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-modulate = Color(0.480336, 0.262631, 0.0576643, 1)
-position = Vector2(-158, -167)
-scale = Vector2(21.5217, -0.833333)
-physics_material_override = SubResource("PhysicsMaterial_do1mt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_tur0l")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-scale = Vector2(20, 20)
-texture = SubResource("CanvasTexture_keh3r")
-
 [node name="Player" parent="." instance=ExtResource("1_n4qx7")]
-position = Vector2(-202, -186)
+position = Vector2(-214, -184)
 
-[node name="Bubblespawner" parent="." instance=ExtResource("2_cgldi")]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(202, 186)
 stream = ExtResource("3_v74yh")
 volume_db = -6.0
 autoplay = true
+
+[node name="Bubblespawner" parent="." instance=ExtResource("2_cgldi")]
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -55,3 +64,8 @@ offset_right = 117.0
 offset_bottom = 53.0
 theme_override_fonts/font = ExtResource("4_1snfj")
 text = "ASS SAATANA"
+
+[node name="Floor" type="TileMapLayer" parent="."]
+position = Vector2(5, 0)
+tile_map_data = PackedByteArray("AADo//X/AAAAAAAAAADp//X/AAAAAAAAAADq//X/AAAAAAAAAADr//X/AAAAAAAAAADs//X/AAAAAAAAAADt//X/AAAAAAAAAADu//X/AAAAAAAAAADv//X/AAAAAAAAAADw//X/AAAAAAAAAADx//X/AAAAAAAAAADy//X/AAAAAAAAAADz//X/AAAAAAAAAAD0//X/AAAAAAAAAAD1//X/AAAAAAAAAAD2//X/AAAAAAAAAAD3//X/AAAAAAAAAAD4//X/AAAAAAAAAAD5//X/AAAAAAAAAAD6//X/AAAAAAAAAAD7//X/AAAAAAAAAAD8//X/AAAAAAAAAAD9//X/AAAAAAAAAAD+//X/AAAAAAAAAAD///X/AAAAAAAAAAD///T/AAAAAAAAAAD///P/AAAAAAAAAAD///L/AAAAAAAAAAD///H/AAAAAAAAAAD///D/AAAAAAAAAAD//+//AAAAAAAAAAD//+7/AAAAAAAAAAD//+3/AAAAAAAAAAD//+z/AAAAAAAAAAD//+v/AAAAAAAAAAD//+r/AAAAAAAAAAD//+n/AAAAAAAAAAD//+j/AAAAAAAAAAD//+f/AAAAAAAAAAD//+b/AAAAAAAAAAD//+X/AAAAAAAAAAD//+T/AAAAAAAAAAD//+P/AAAAAAAAAAD//+L/AAAAAAAAAAD//+H/AAAAAAAAAAD//+D/AAAAAAAAAAD//9//AAAAAAAAAAD//97/AAAAAAAAAAD//93/AAAAAAAAAAD//9z/AAAAAAAAAAD//9v/AAAAAAAAAAD//9r/AAAAAAAAAAD//9n/AAAAAAAAAAD//9j/AAAAAAAAAAD//9f/AAAAAAAAAAD//9b/AAAAAAAAAAD//9X/AAAAAAAAAAD//9T/AAAAAAAAAAD//9P/AAAAAAAAAAD//9L/AAAAAAAAAAD//9H/AAAAAAAAAAD//9D/AAAAAAAAAAD//8//AAAAAAAAAAD//87/AAAAAAAAAAD//83/AAAAAAAAAAD//8z/AAAAAAAAAAD//8v/AAAAAAAAAAD//8r/AAAAAAAAAAD//8n/AAAAAAAAAAD//8j/AAAAAAAAAAD//8f/AAAAAAAAAAD//8b/AAAAAAAAAAD//8X/AAAAAAAAAAD//8T/AAAAAAAAAAD//8P/AAAAAAAAAAD//8L/AAAAAAAAAAD//8H/AAAAAAAAAAD//8D/AAAAAAAAAAD//7//AAAAAAAAAAD//77/AAAAAAAAAAD//73/AAAAAAAAAAD//7z/AAAAAAAAAAD//7v/AAAAAAAAAAD//7r/AAAAAAAAAAD//7n/AAAAAAAAAAD//7j/AAAAAAAAAAD//7f/AAAAAAAAAAD//7b/AAAAAAAAAADo//T/AAAAAAAAAADo//P/AAAAAAAAAADo//L/AAAAAAAAAADo//H/AAAAAAAAAADo//D/AAAAAAAAAADo/+//AAAAAAAAAADo/+7/AAAAAAAAAADo/+3/AAAAAAAAAADo/+z/AAAAAAAAAADo/+v/AAAAAAAAAADo/+r/AAAAAAAAAADo/+n/AAAAAAAAAADo/+j/AAAAAAAAAADo/+f/AAAAAAAAAADo/+b/AAAAAAAAAADo/+X/AAAAAAAAAADo/+T/AAAAAAAAAADo/+P/AAAAAAAAAADo/+L/AAAAAAAAAADo/+H/AAAAAAAAAADo/+D/AAAAAAAAAADo/9//AAAAAAAAAADo/97/AAAAAAAAAADo/93/AAAAAAAAAADo/9z/AAAAAAAAAADo/9v/AAAAAAAAAADo/9r/AAAAAAAAAADo/9n/AAAAAAAAAADo/9j/AAAAAAAAAADo/9f/AAAAAAAAAADo/9b/AAAAAAAAAADo/9X/AAAAAAAAAADo/9T/AAAAAAAAAADo/9P/AAAAAAAAAADo/9L/AAAAAAAAAADo/9H/AAAAAAAAAADo/9D/AAAAAAAAAADo/8//AAAAAAAAAADo/87/AAAAAAAAAADo/83/AAAAAAAAAADo/8z/AAAAAAAAAADo/8v/AAAAAAAAAADo/8r/AAAAAAAAAADo/8n/AAAAAAAAAADo/8j/AAAAAAAAAADo/8f/AAAAAAAAAADo/8b/AAAAAAAAAADo/8X/AAAAAAAAAADo/8T/AAAAAAAAAADo/8P/AAAAAAAAAADo/8L/AAAAAAAAAADo/8H/AAAAAAAAAADo/8D/AAAAAAAAAADo/7//AAAAAAAAAADo/77/AAAAAAAAAADo/73/AAAAAAAAAADo/7z/AAAAAAAAAADo/7v/AAAAAAAAAADo/7r/AAAAAAAAAADo/7n/AAAAAAAAAADo/7j/AAAAAAAAAADo/7f/AAAAAAAAAADo/7b/AAAAAAAAAADo/7X/AAAAAAAAAADo/7T/AAAAAAAAAADo/7P/AAAAAAAAAADo/7L/AAAAAAAAAADo/7H/AAAAAAAAAADo/7D/AAAAAAAAAADo/6//AAAAAAAAAADo/67/AAAAAAAAAADo/63/AAAAAAAAAADo/6z/AAAAAAAAAAD//7X/AAAAAAAAAAD//7T/AAAAAAAAAAD//7P/AAAAAAAAAAD//7L/AAAAAAAAAAD//7H/AAAAAAAAAAD//7D/AAAAAAAAAAD//6//AAAAAAAAAAD//67/AAAAAAAAAAD//63/AAAAAAAAAAD//6z/AAAAAAAAAAD//6v/AAAAAAAAAAD//6r/AAAAAAAAAAD//6n/AAAAAAAAAAD//6j/AAAAAAAAAAD//6f/AAAAAAAAAAD//6b/AAAAAAAAAAD//6X/AAAAAAAAAAD//6T/AAAAAAAAAAD//6P/AAAAAAAAAAD//6L/AAAAAAAAAAD//6H/AAAAAAAAAADo/6v/AAAAAAAAAADo/6r/AAAAAAAAAADo/6n/AAAAAAAAAADo/6j/AAAAAAAAAADo/6f/AAAAAAAAAADo/6b/AAAAAAAAAADo/6X/AAAAAAAAAADo/6T/AAAAAAAAAADo/6P/AAAAAAAAAADo/6L/AAAAAAAAAADo/6H/AAAAAAAAAADo/6D/AAAAAAAAAADo/5//AAAAAAAAAADo/57/AAAAAAAAAADo/53/AAAAAAAAAADo/5z/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_co000")

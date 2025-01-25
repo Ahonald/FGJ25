@@ -1,8 +1,6 @@
-res://player.tscn
-res://player.gd
 res://gameplay.tscn
 res://movingbubble.tscn
-res://movingbubble.gd
-res://bubblespawner.gd
 res://bubblespawner.tscn
-res://gameplay.gd
+res://player.tscn
+res://Platform.tscn
+res://longplatform.tscn
