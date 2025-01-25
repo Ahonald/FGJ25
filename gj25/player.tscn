@@ -258,7 +258,7 @@ _data = {
 script = ExtResource("1_shpw8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -175)
+position = Vector2(12, 5)
 zoom = Vector2(2, 2)
 limit_left = 0
 limit_right = 0
