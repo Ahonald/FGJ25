@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/victroad.ogg-08ffa3c4d76796782b483a32937d5437
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

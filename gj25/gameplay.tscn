@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c0ps80gtc3hvt"]
+[gd_scene load_steps=16 format=4 uid="uid://c0ps80gtc3hvt"]
 
 [ext_resource type="PackedScene" uid="uid://yccqqquuyd3l" path="res://player.tscn" id="1_n4qx7"]
 [ext_resource type="Script" path="res://gameplay.gd" id="1_y0rwh"]
@@ -6,11 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://dkvs3jh0l21b0" path="res://bubblespawner.tscn" id="2_cgldi"]
 [ext_resource type="AudioStream" uid="uid://mf4t5lo6pwja" path="res://Audio/Music/jpoptest.ogg" id="3_v74yh"]
 [ext_resource type="FontFile" uid="uid://f8igmj5gexlb" path="res://Fonts/HomeVideo-BLG6G.ttf" id="4_1snfj"]
-[ext_resource type="AudioStream" path="res://Audio/Voices/Voice1.ogg" id="7_ds7nc"]
 [ext_resource type="Texture2D" uid="uid://cwuk2k024rblm" path="res://Sprites/Enviromental/PLATFORMS.png" id="7_du5wl"]
 [ext_resource type="Script" path="res://assholeplayer.gd" id="9_eltgw"]
 [ext_resource type="AudioStream" uid="uid://bosft1y2h2uth" path="res://Audio/SFX/BubblePop.ogg" id="10_2ckfn"]
 [ext_resource type="PackedScene" uid="uid://cg88hgasfibe2" path="res://finishlinetrigger.tscn" id="11_4bps1"]
+[ext_resource type="AudioStream" uid="uid://bv43k40ppui3t" path="res://Audio/Music/ClearJingle.ogg" id="11_33qup"]
+[ext_resource type="AudioStream" uid="uid://dj880neq1dfh3" path="res://Audio/Music/victroad.ogg" id="11_t5vyh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6vob8"]
 texture = ExtResource("7_du5wl")
@@ -37,6 +38,17 @@ texture = ExtResource("7_du5wl")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6vob8")
 
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_iesx2"]
+clip_count = 2
+clip_0/name = &"Clear Jingle"
+clip_0/stream = ExtResource("11_33qup")
+clip_0/auto_advance = 1
+clip_0/next_clip = 1
+clip_1/name = &"Victroad"
+clip_1/stream = ExtResource("11_t5vyh")
+clip_1/auto_advance = 1
+clip_1/next_clip = 1
+
 [node name="Gameplay" type="Node2D"]
 position = Vector2(0, -1)
 script = ExtResource("1_y0rwh")
@@ -45,6 +57,7 @@ script = ExtResource("1_y0rwh")
 stream = ExtResource("3_v74yh")
 volume_db = -6.0
 autoplay = true
+bus = &"MUSIC"
 
 [node name="Player" parent="." instance=ExtResource("1_n4qx7")]
 position = Vector2(-136, -180)
@@ -75,11 +88,11 @@ tile_map_data = PackedByteArray("AADo//X/AAAAAAAAAADp//X/AAAAAAAAAADq//X/AAAAAAA
 tile_set = SubResource("TileSet_co000")
 
 [node name="AssholePlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_ds7nc")
 script = ExtResource("9_eltgw")
 
 [node name="BubblePop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_2ckfn")
+volume_db = -12.0
 
 [node name="CheckPoint1" parent="." instance=ExtResource("2_c2eag")]
 position = Vector2(-133, -1783)
@@ -87,3 +100,7 @@ scale = Vector2(1.74297, 0.251499)
 
 [node name="Finishlinetrigger" parent="." instance=ExtResource("11_4bps1")]
 position = Vector2(-28, -184)
+
+[node name="Victory" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamInteractive_iesx2")
+bus = &"MUSIC"
