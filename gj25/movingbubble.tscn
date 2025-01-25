@@ -466,8 +466,6 @@ animations = [{
 
 [node name="Movingbubble" type="CharacterBody2D"]
 script = ExtResource("1_8e0s3")
-moveLength = null
-movementSpeed = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_81u7f")
@@ -486,4 +484,4 @@ vertical_alignment = 1
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.352941)
 sprite_frames = SubResource("SpriteFrames_1qlmg")
-animation = &"Lime"
+animation = &"Plum"
