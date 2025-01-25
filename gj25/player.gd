@@ -8,7 +8,7 @@ var nextXP = 50
 var die = false
 
 var SPEED = 150
-const JUMP_VELOCITY = -250.0
+const JUMP_VELOCITY = -450.0
 
 var maxJumpCount = 1
 var jumpCount = 1
@@ -79,17 +79,17 @@ func _physics_process(delta):
 				get_node("AnimatedSprite2D").flip_h = false
 				isPointingRight = true
 			velocity.x = direction * SPEED
-			#if velocity.y == 0 && !isShooting:
-			anim.play("Run")
+			if velocity.y == 0: #&& !isShooting:
+				anim.play("Run")
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
-			#if velocity.y == 0 && !isShooting:
-			anim.play("Idle")
+			if velocity.y == 0: #&& !isShooting:
+				anim.play("Idle")
 		if velocity.y > 0:
 			anim.play("Fall")
 			
-		if !dead:
-			move_and_slide()
+		#if !dead:
+		#	move_and_slide()
 
 		move_and_slide()
 	else:
