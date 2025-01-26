@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://c0ps80gtc3hvt"]
+[gd_scene load_steps=19 format=4 uid="uid://c0ps80gtc3hvt"]
 
 [ext_resource type="PackedScene" uid="uid://yccqqquuyd3l" path="res://player.tscn" id="1_n4qx7"]
 [ext_resource type="Script" path="res://gameplay.gd" id="1_y0rwh"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://bv43k40ppui3t" path="res://Audio/Music/ClearJingle.ogg" id="11_33qup"]
 [ext_resource type="AudioStream" uid="uid://dj880neq1dfh3" path="res://Audio/Music/victroad.ogg" id="11_t5vyh"]
 [ext_resource type="Texture2D" uid="uid://dnglidg7r18j6" path="res://Sprites/Enviromental/PARALBGv3.png" id="13_ch8oe"]
+[ext_resource type="Texture2D" uid="uid://l0e6m1vu3gci" path="res://Sprites/Enviromental/GOALPOST.png" id="14_xgngj"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_71sxy"]
 random_pitch = 1.3
@@ -134,7 +135,7 @@ position = Vector2(-138, -16422)
 scale = Vector2(79.3168, 0.1369)
 
 [node name="Finishlinetrigger" parent="." instance=ExtResource("11_4bps1")]
-position = Vector2(-69, -20170)
+position = Vector2(-69, -20169)
 scale = Vector2(7.25367, 1)
 
 [node name="Victory" type="AudioStreamPlayer" parent="."]
@@ -149,3 +150,7 @@ autoscroll = Vector2(0, 60)
 
 [node name="Sprite2D" type="Sprite2D" parent="BGSCROLL"]
 texture = ExtResource("13_ch8oe")
+
+[node name="Goalpost" type="Sprite2D" parent="."]
+position = Vector2(-77, -20191)
+texture = ExtResource("14_xgngj")

@@ -1,24 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737880725
+::res://::1737884961
 assholeplayer.gd::GDScript::-1::1737829564::0::1::::<>AudioStreamPlayer<>::
 bubblespawner.gd::GDScript::-1::1737829564::0::1::::<>Node<>::
-bubblespawner.tscn::PackedScene::7905645813069474571::1737880725::0::1::::<><>::res://bubblespawner.gd
+bubblespawner.tscn::PackedScene::7905645813069474571::1737884960::0::1::::<><>::res://bubblespawner.gd
 checkpoint.gd::GDScript::-1::1737829564::0::1::::<>Node2D<>::
-checkpoint.tscn::PackedScene::2085770144828505876::1737880725::0::1::::<><>::res://checkpoint.gd
-default_bus_layout.tres::AudioBusLayout::8248762225657191027::1737880593::0::1::::<><>::
-finishline.gd::GDScript::-1::1737880706::0::1::::<>Node2D<>::
-finishlinetrigger.tscn::PackedScene::5264115372381932535::1737880725::0::1::::<><>::res://finishline.gd
-gameplay.gd::GDScript::-1::1737828256::0::1::::<>Node2D<>::
-gameplay.tscn::PackedScene::6559681284936201433::1737880725::0::1::::<><>::uid://yccqqquuyd3l::::res://player.tscn<>res://gameplay.gd<>uid://4ymlg7wgn1e3::::res://checkpoint.tscn<>uid://dkvs3jh0l21b0::::res://bubblespawner.tscn<>uid://mf4t5lo6pwja::::res://Audio/Music/jpoptest.ogg<>uid://f8igmj5gexlb::::res://Fonts/HomeVideo-BLG6G.ttf<>uid://cwuk2k024rblm::::res://Sprites/Enviromental/PLATFORMS.png<>res://assholeplayer.gd<>uid://bosft1y2h2uth::::res://Audio/SFX/BubblePop.ogg<>uid://cg88hgasfibe2::::res://finishlinetrigger.tscn<>uid://bv43k40ppui3t::::res://Audio/Music/ClearJingle.ogg<>uid://dj880neq1dfh3::::res://Audio/Music/victroad.ogg
+checkpoint.tscn::PackedScene::2085770144828505876::1737884960::0::1::::<><>::res://checkpoint.gd
+default_bus_layout.tres::AudioBusLayout::8248762225657191027::1737882741::0::1::::<><>::
+finishline.gd::GDScript::-1::1737882199::0::1::::<>Node2D<>::
+finishlinetrigger.tscn::PackedScene::5264115372381932535::1737884960::0::1::::<><>::res://finishline.gd
+gameplay.gd::GDScript::-1::1737882581::0::1::::<>Node2D<>::
+gameplay.tscn::PackedScene::6559681284936201433::1737884961::0::1::::<><>::uid://yccqqquuyd3l::::res://player.tscn<>res://gameplay.gd<>uid://4ymlg7wgn1e3::::res://checkpoint.tscn<>uid://dkvs3jh0l21b0::::res://bubblespawner.tscn<>uid://mf4t5lo6pwja::::res://Audio/Music/jpoptest.ogg<>uid://f8igmj5gexlb::::res://Fonts/HomeVideo-BLG6G.ttf<>uid://cwuk2k024rblm::::res://Sprites/Enviromental/PLATFORMS.png<>res://assholeplayer.gd<>uid://bosft1y2h2uth::::res://Audio/SFX/BubblePop.ogg<>uid://cg88hgasfibe2::::res://finishlinetrigger.tscn<>uid://bv43k40ppui3t::::res://Audio/Music/ClearJingle.ogg<>uid://dj880neq1dfh3::::res://Audio/Music/victroad.ogg<>uid://dnglidg7r18j6::::res://Sprites/Enviromental/PARALBGv3.png
 icon.svg::CompressedTexture2D::3439951064490496939::1737814258::1737829764::1::::<><>::
-longplatform.tscn::PackedScene::5606415294883635714::1737880725::0::1::::<><>::
-movingbubble.gd::GDScript::-1::1737880706::0::1::::<>CharacterBody2D<>::
-movingbubble.tscn::PackedScene::1384462798912843976::1737880724::0::1::::<><>::res://movingbubble.gd<>uid://doaq6sfirdfsy::::res://Sprites/Enviromental/KUPLASPRITESHEET32x32.png<>uid://f8igmj5gexlb::::res://Fonts/HomeVideo-BLG6G.ttf
-Platform.tscn::PackedScene::2560284422622517000::1737880725::0::1::::<><>::uid://cwuk2k024rblm::::res://Sprites/Enviromental/PLATFORMS.png
+longplatform.tscn::PackedScene::5606415294883635714::1737884960::0::1::::<><>::
+movingbubble.gd::GDScript::-1::1737882539::0::1::::<>CharacterBody2D<>::
+movingbubble.tscn::PackedScene::1384462798912843976::1737884960::0::1::::<><>::res://movingbubble.gd<>uid://doaq6sfirdfsy::::res://Sprites/Enviromental/KUPLASPRITESHEET32x32.png<>uid://f8igmj5gexlb::::res://Fonts/HomeVideo-BLG6G.ttf
+Platform.tscn::PackedScene::2560284422622517000::1737884960::0::1::::<><>::uid://cwuk2k024rblm::::res://Sprites/Enviromental/PLATFORMS.png
 player.gd::GDScript::-1::1737830301::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::1688811875535763919::1737880725::0::1::::<><>::res://player.gd<>uid://g1nxuf5vpyld::::res://Sprites/Punainen_ukko/nobg_Old hero.PNG<>uid://j221qpefrnvn::::res://Audio/SFX/Jump.ogg
+player.tscn::PackedScene::1688811875535763919::1737884960::0::1::::<><>::res://player.gd<>uid://g1nxuf5vpyld::::res://Sprites/Punainen_ukko/nobg_Old hero.PNG<>uid://j221qpefrnvn::::res://Audio/SFX/Jump.ogg
 ::res://Audio/::1737819177
-::res://Audio/Music/::1737880884
+::res://Audio/Music/::1737880908
 ClearJingle.ogg::AudioStreamOggVorbis::3921972851195661851::1737814258::1737831839::1::::<><>::
 jpoptest.ogg::AudioStreamOggVorbis::854384328672598514::1737880468::1737880508::1::::<><>::
 victroad.ogg::AudioStreamOggVorbis::7861135105059087958::1737880890::1737880908::1::::<><>::
@@ -54,7 +54,8 @@ WinVoice5.ogg::AudioStreamOggVorbis::7622006301033857678::1737828355::1737829763
 ::res://Fonts/::1737829763
 HomeVideo-BLG6G.ttf::FontFile::419565780334402003::1737814258::1737829763::1::::<><>::
 ::res://Sprites/::1737814258
-::res://Sprites/Enviromental/::1737829764
+::res://Sprites/Enviromental/::1737886102
+GOALPOST.png::CompressedTexture2D::823985622879062948::1737886102::1737886117::1::::<><>::
 KUPLASPRITESHEET32x32.png::CompressedTexture2D::8142933647037721848::1737814258::1737829764::1::::<><>::
 KUPLASPRITESHEET - Copy.png::CompressedTexture2D::2840517735455442784::1737814258::1737829764::1::::<><>::
 KUPLASPRITESHEET.png::CompressedTexture2D::7039583129930529877::1737814258::1737829764::1::::<><>::
