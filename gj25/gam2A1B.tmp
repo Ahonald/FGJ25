@@ -113,7 +113,6 @@ offset_right = 321.0
 offset_bottom = 331.0
 
 [node name="Label" type="Label" parent="UI/EndLabel/Panel"]
-layout_mode = 0
 offset_left = 96.0
 offset_top = 213.0
 offset_right = 377.0
@@ -192,6 +191,3 @@ scale = Vector2(0.996638, 0.950248)
 [node name="Platform3" parent="." instance=ExtResource("15_d0223")]
 position = Vector2(-141, -25631)
 scale = Vector2(11.7295, 1)
-
-[node name="Finishlinetrigger2" parent="." instance=ExtResource("11_4bps1")]
-position = Vector2(-100, -186)

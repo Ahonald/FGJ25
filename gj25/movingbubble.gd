@@ -21,7 +21,7 @@ var currentRangeVal = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	startPoint = global_position.y # Replace with function body.
-	movementFactor = rng.randf_range(1, 8)
+	movementFactor = rng.randf_range(1, 6)
 	currentRangeVal = movementFactor
 	movementRange = 100 * movementFactor
 	movementSpeed = 50 * movementFactor

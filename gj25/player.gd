@@ -94,7 +94,7 @@ func _physics_process(delta):
 
 		move_and_slide()
 	else:
-		#anim.play("Die")
+		anim.stop()
 		await get_tree().create_timer(1).timeout
 		music.stop()
 		#sprite.visible = false

@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 		if timer > spawnfrequency:
 			var newBubble = bubble.instantiate()
 			gameplay.add_child(newBubble)
-			newBubble.global_position.x = player.global_position.x + rng.randf_range(-50,50)
+			newBubble.global_position.x = player.global_position.x + rng.randf_range(-40,40)
 			newBubble.global_position.y = player.global_position.y + 250
 			spawnfrequency = rng.randf_range(0.5,1)
 			timer = 0

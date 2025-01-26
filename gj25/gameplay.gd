@@ -9,7 +9,7 @@ var startingPointValue = 0
 @onready var BubblePop = $BubblePop
 
 var playerFallMag = 0;
-var playerFallMaxMag = 1.5;
+var playerFallMaxMag = 2;
 
 var maxHeightValue = 0
 # Called when the node enters the scene tree for the first time.
@@ -27,8 +27,7 @@ func _process(delta: float) -> void:
 		playerFallMag = 0
 	if(playerFallMag > playerFallMaxMag):
 		if !AssholePlayer.playing:
-			pass
-			#AssholePlayer._playAssholeSound()
+			AssholePlayer._playAssholeSound()
 		playerFallMag = 0
 		
 	_changeCurrentHeight(-player.global_position.y)
