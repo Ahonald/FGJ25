@@ -1,4 +1,15 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://dpr055po7qqyd"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://dpr055po7qqyd"]
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_erv0o"]
+resource_name = "Compressor"
+threshold = -22.0
+sidechain = &"VOICES"
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_1gkql"]
+resource_name = "Compressor"
+threshold = -22.0
+release_ms = 800.0
+sidechain = &"VOICES"
 
 [resource]
 bus/1/name = &"SFX"
@@ -7,12 +18,16 @@ bus/1/mute = false
 bus/1/bypass_fx = false
 bus/1/volume_db = 0.0
 bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectCompressor_erv0o")
+bus/1/effect/0/enabled = true
 bus/2/name = &"MUSIC"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
-bus/2/volume_db = -8.00903
+bus/2/volume_db = -8.39524
 bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectCompressor_1gkql")
+bus/2/effect/0/enabled = true
 bus/3/name = &"VOICES"
 bus/3/solo = false
 bus/3/mute = false

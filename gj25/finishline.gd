@@ -17,7 +17,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	print(body.name)
 	if(body.name == "Player"):
 		body.die = true
+		$"../MusicPlayer".stop()
 		AssholePlayer._playCheckpointNoise()	
-		
 		$"../Victory".play()
 	pass # Replace with function body.

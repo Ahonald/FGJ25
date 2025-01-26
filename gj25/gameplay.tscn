@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://c0ps80gtc3hvt"]
+[gd_scene load_steps=17 format=4 uid="uid://c0ps80gtc3hvt"]
 
 [ext_resource type="PackedScene" uid="uid://yccqqquuyd3l" path="res://player.tscn" id="1_n4qx7"]
 [ext_resource type="Script" path="res://gameplay.gd" id="1_y0rwh"]
@@ -12,6 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://cg88hgasfibe2" path="res://finishlinetrigger.tscn" id="11_4bps1"]
 [ext_resource type="AudioStream" uid="uid://bv43k40ppui3t" path="res://Audio/Music/ClearJingle.ogg" id="11_33qup"]
 [ext_resource type="AudioStream" uid="uid://dj880neq1dfh3" path="res://Audio/Music/victroad.ogg" id="11_t5vyh"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_71sxy"]
+random_pitch = 1.3
+streams_count = 1
+stream_0/stream = ExtResource("10_2ckfn")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6vob8"]
 texture = ExtResource("7_du5wl")
@@ -53,9 +58,13 @@ clip_1/next_clip = 1
 position = Vector2(0, -1)
 script = ExtResource("1_y0rwh")
 
+[node name="BubblePop" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_71sxy")
+volume_db = -10.0
+bus = &"SFX"
+
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_v74yh")
-volume_db = -6.0
 autoplay = true
 bus = &"MUSIC"
 
@@ -88,11 +97,8 @@ tile_map_data = PackedByteArray("AADo//X/AAAAAAAAAADp//X/AAAAAAAAAADq//X/AAAAAAA
 tile_set = SubResource("TileSet_co000")
 
 [node name="AssholePlayer" type="AudioStreamPlayer" parent="."]
+bus = &"VOICES"
 script = ExtResource("9_eltgw")
-
-[node name="BubblePop" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_2ckfn")
-volume_db = -12.0
 
 [node name="CheckPoint1" parent="." instance=ExtResource("2_c2eag")]
 position = Vector2(-133, -1783)
@@ -103,4 +109,5 @@ position = Vector2(-28, -184)
 
 [node name="Victory" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamInteractive_iesx2")
+volume_db = -2.0
 bus = &"MUSIC"
