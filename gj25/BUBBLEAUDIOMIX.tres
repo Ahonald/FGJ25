@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://dpr055po7qqyd"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://cqpgg13tmhtgo"]
 
 [sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_erv0o"]
 resource_name = "Compressor"
@@ -32,5 +32,5 @@ bus/3/name = &"VOICES"
 bus/3/solo = false
 bus/3/mute = false
 bus/3/bypass_fx = false
-bus/3/volume_db = -1.71923
+bus/3/volume_db = 0.0
 bus/3/send = &"Master"

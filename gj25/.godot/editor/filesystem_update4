@@ -1,3 +1,11 @@
 res://default_bus_layout.tres
+res://player.tscn
 res://movingbubble.gd
 res://finishline.gd
+res://movingbubble.tscn
+res://bubblespawner.tscn
+res://Platform.tscn
+res://longplatform.tscn
+res://checkpoint.tscn
+res://finishlinetrigger.tscn
+res://gameplay.tscn

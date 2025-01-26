@@ -67,10 +67,12 @@ script = ExtResource("1_y0rwh")
 [node name="BubblePop" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_71sxy")
 volume_db = -10.0
+bus = &"SFX"
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_v74yh")
 autoplay = true
+bus = &"MUSIC"
 
 [node name="Player" parent="." instance=ExtResource("1_n4qx7")]
 position = Vector2(-137, -183)
@@ -128,6 +130,7 @@ tile_map_data = PackedByteArray("AADo//X/AAAAAAYAAADp//X/AAAAAAAAAADq//X/AAAAAAE
 tile_set = SubResource("TileSet_co000")
 
 [node name="AssholePlayer" type="AudioStreamPlayer" parent="."]
+bus = &"VOICES"
 script = ExtResource("9_eltgw")
 
 [node name="CheckPoint1" parent="." instance=ExtResource("2_c2eag")]
@@ -169,6 +172,7 @@ scale = Vector2(7.25367, 1)
 [node name="Victory" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamInteractive_iesx2")
 volume_db = -2.0
+bus = &"MUSIC"
 
 [node name="BGSCROLL" type="Parallax2D" parent="."]
 show_behind_parent = true
@@ -194,4 +198,5 @@ position = Vector2(-141, -25631)
 scale = Vector2(11.7295, 1)
 
 [node name="Finishlinetrigger2" parent="." instance=ExtResource("11_4bps1")]
-position = Vector2(-100, -186)
+visible = false
+position = Vector2(328, -192)

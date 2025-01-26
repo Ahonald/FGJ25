@@ -1,0 +1,10 @@
+res://BUBBLEAUDIOMIX.tres::45f3eadb4e476a85972bf527c07f3ae2::1737896605::res://.godot/exported/133200997/export-985b0554b3b77e823ff8497de26738f3-BUBBLEAUDIOMIX.res
+res://bubblespawner.tscn::3cb1f871fd3e7aa40dcf8c35809a0c1a::1737898993::res://.godot/exported/133200997/export-7bbbdb1b941fe36176b4be8296359767-bubblespawner.scn
+res://checkpoint.tscn::a756f6a2705ebf56f35a933caf5d0f59::1737898993::res://.godot/exported/133200997/export-8f2dd19d5636782311f5e9475e3887f8-checkpoint.scn
+res://default_bus_layout.tres::fda4ffe63eb06e33d61970b41a13cc2e::1737898992::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://finishlinetrigger.tscn::77e67809d0a9a401526a6500101e9d01::1737898993::res://.godot/exported/133200997/export-e221f43b5647aa75a42249ee2d4590d3-finishlinetrigger.scn
+res://gameplay.tscn::8ea8e489612e758156816590944485ed::1737899035::res://.godot/exported/133200997/export-75187f5b8f76bb0bea9ac8c296bdda67-gameplay.scn
+res://longplatform.tscn::83e429b0a298175e4b8d95459c5c8093::1737898993::res://.godot/exported/133200997/export-a7e819f978c7e4adfb28ce38e360d76d-longplatform.scn
+res://movingbubble.tscn::30c8f1272ea35c6c41ecb47e652f3ee2::1737898993::res://.godot/exported/133200997/export-e97a891a69e4e6f120a332582ad92058-movingbubble.scn
+res://Platform.tscn::df8dc5baa3137c3987fbc2ec5f51ba11::1737898993::res://.godot/exported/133200997/export-ad51a66c3829755016128bc6dbbf83bc-Platform.scn
+res://player.tscn::b811fe18d2f8f44cd9e5c6aad6ad1033::1737898993::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn
